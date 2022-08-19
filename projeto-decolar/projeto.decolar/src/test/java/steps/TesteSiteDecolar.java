@@ -20,9 +20,11 @@ public class TesteSiteDecolar {
 	@Given("que eu esteja no site")
 	public void queEuEstejaNoSite() {
 		metodos.clicar(el.cookies);
+		metodos.clicar(el.soIda);
 		metodos.escrever(el.origem, "São Paulo");
 		metodos.escrever(el.destino, "Rio de Janeiro");
-		metodos.escrever(el.dataIda, "17");
+		metodos.clicar(el.data);
+		metodos.clicar(el.dia);
 	}
 
 	@When("preencher os dados")

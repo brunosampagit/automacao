@@ -2,6 +2,7 @@ package metodos;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.Select;
 
 import drivers.DriverFactory;
 
@@ -19,5 +20,11 @@ public class MetodosDeTestes extends DriverFactory {
 	public void escrever(By elemento, String texto) {
 		driver.findElement(elemento).sendKeys(texto);
 	}
-
+	
+	public void selecionarDia (By elemento, String valor) {
+		Select dia = new Select(driver.findElement(elemento));
+		dia.selectByValue(valor);;
+		
+	}
+	
 }
